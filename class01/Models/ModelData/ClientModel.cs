@@ -7,6 +7,7 @@
         public string CPF { get; set; }
         public string Cellphone { get; set; }
         public string Adress { get; set; }
+        public string CreditCard { get; set; }
 
     }
 }
