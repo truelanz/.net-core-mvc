@@ -1,8 +1,5 @@
 using class01.Controllers.Base;
-using class01.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
-using System.Globalization;
 
 
 //import classe para herança

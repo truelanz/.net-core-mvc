@@ -1,7 +1,11 @@
+using AutoMapper;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+// Adicione o AutoMapper aos serviços
+builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
 
@@ -15,10 +19,11 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.UseAuthorization();
+//Adicionar funcionalidade de serviço AutoMapper
+app.MapControllers();
+
 
 //Configuração de Rota Padrão | controller/metodo/parametro
 app.MapControllerRoute(
